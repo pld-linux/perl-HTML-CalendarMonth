@@ -11,7 +11,7 @@ Name:		perl-HTML-CalendarMonth
 Version:	1.09
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ef6c4b2167265e47e08dac467832b2e7
