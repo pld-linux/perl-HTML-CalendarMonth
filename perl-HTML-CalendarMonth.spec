@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	HTML
-%define	pnam	CalendarMonth
+%define		pdir	HTML
+%define		pnam	CalendarMonth
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
 Summary(pl):	HTML::CalendarMonth - generowanie i obrabianie miesiêcznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
