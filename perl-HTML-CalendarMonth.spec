@@ -8,17 +8,19 @@
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
 Summary(pl):	HTML::CalendarMonth - generowanie i obrabianie miesiêcznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
-Version:	1.09
+Version:	1.15
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ef6c4b2167265e47e08dac467832b2e7
+# Source0-md5:	cc4c351d35c4e633c6b291c3b9d8cafe
 %if %{with tests}
 BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-Date-Manip
-BuildRequires:	perl-HTML-Element-Extended
+BuildRequires:	perl-DateTime-Locale
+BuildRequires:	perl-Class-Accessor
+BuildRequires:	perl-HTML-Element-Extended >= 1.13
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -79,4 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/HTML/CalendarMonth.pm
+%dir %{perl_vendorlib}/HTML/CalendarMonth
+%{perl_vendorlib}/HTML/CalendarMonth/*.pm
+%{perl_vendorlib}/HTML/CalendarMonth/DateTool/*.pm
 %{_mandir}/man3/*
