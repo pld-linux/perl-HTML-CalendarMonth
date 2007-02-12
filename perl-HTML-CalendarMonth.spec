@@ -6,7 +6,7 @@
 %define		pdir	HTML
 %define		pnam	CalendarMonth
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
-Summary(pl):	HTML::CalendarMonth - generowanie i obrabianie miesiêcznych kalendarzy w HTML
+Summary(pl.UTF-8):   HTML::CalendarMonth - generowanie i obrabianie miesiÄ™cznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
 Version:	1.15
 Release:	1
@@ -42,19 +42,19 @@ If you wish to use 'week of the year' numbering, or want to explore
 dates beyond the capability of the internal Perl time functions,
 then you will need Date::Calc or Date::Manip.
 
-%description -l pl
-HTML::CalendarMonth to modu³ upraszczaj±cy renderowanie miesiêcznych
+%description -l pl.UTF-8
+HTML::CalendarMonth to moduÅ‚ upraszczajÄ…cy renderowanie miesiÄ™cznych
 kalendarzy w HTML-u. To NIE jest jest system planowania.
 
-Kalendarze s± reprezentowane jako struktury HTML::Element,
+Kalendarze sÄ… reprezentowane jako struktury HTML::Element,
 wyprowadzone z klasy HTML::ElementTable.
 
-Modu³ obs³uguje numerowanie tygodni w roku, dowolne definicje
-pierwszego dnia tygodnia oraz aliasy, co pozwala na wyra¿anie
-dowolnego elementu w dowolnym jêzyku, jaki mo¿e obs³u¿yæ HTML.
+ModuÅ‚ obsÅ‚uguje numerowanie tygodni w roku, dowolne definicje
+pierwszego dnia tygodnia oraz aliasy, co pozwala na wyraÅ¼anie
+dowolnego elementu w dowolnym jÄ™zyku, jaki moÅ¼e obsÅ‚uÅ¼yÄ‡ HTML.
 
-Do numerowania tygodni w roku albo obs³ugi dat spoza zakresu
-obs³ugiwanego wewnêtrznie przez funkcje Perla potrzebny jest modu³
+Do numerowania tygodni w roku albo obsÅ‚ugi dat spoza zakresu
+obsÅ‚ugiwanego wewnÄ™trznie przez funkcje Perla potrzebny jest moduÅ‚
 Date::Calc lub Date::Manip.
 
 %prep
