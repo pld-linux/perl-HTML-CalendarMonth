@@ -6,7 +6,7 @@
 %define		pdir	HTML
 %define		pnam	CalendarMonth
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
-Summary(pl.UTF-8):   HTML::CalendarMonth - generowanie i obrabianie miesięcznych kalendarzy w HTML
+Summary(pl.UTF-8):	HTML::CalendarMonth - generowanie i obrabianie miesięcznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
 Version:	1.15
 Release:	1
