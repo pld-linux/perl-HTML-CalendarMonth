@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	HTML
 %define		pnam	CalendarMonth
+%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
 Summary(pl.UTF-8):	HTML::CalendarMonth - generowanie i obrabianie miesięcznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
@@ -15,15 +15,16 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5b633b20139e21fc161e053038a9c161
+URL:		http://search.cpan.org/dist/HTML-CalendarMonth/
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Class-Accessor
 BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-Date-Manip
 BuildRequires:	perl-DateTime-Locale
-BuildRequires:	perl-Class-Accessor
 BuildRequires:	perl-HTML-Element-Extended >= 1.18
 %endif
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,8 +40,8 @@ arbitrary 1st day of the week definitions, and aliasing so that you
 can express any element in any language HTML can handle.
 
 If you wish to use 'week of the year' numbering, or want to explore
-dates beyond the capability of the internal Perl time functions,
-then you will need Date::Calc or Date::Manip.
+dates beyond the capability of the internal Perl time functions, then
+you will need Date::Calc or Date::Manip.
 
 %description -l pl.UTF-8
 HTML::CalendarMonth to moduł upraszczający renderowanie miesięcznych
