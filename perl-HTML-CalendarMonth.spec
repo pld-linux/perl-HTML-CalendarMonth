@@ -4,7 +4,6 @@
 
 %define		pdir	HTML
 %define		pnam	CalendarMonth
-%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
 Summary(pl.UTF-8):	HTML::CalendarMonth - generowanie i obrabianie miesięcznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
