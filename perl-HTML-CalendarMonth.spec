@@ -7,13 +7,15 @@
 Summary:	HTML::CalendarMonth - generating and manipulating HTML calendar months
 Summary(pl.UTF-8):	HTML::CalendarMonth - generowanie i obrabianie miesięcznych kalendarzy w HTML
 Name:		perl-HTML-CalendarMonth
-Version:	1.26
+Version:	2.04
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5b633b20139e21fc161e053038a9c161
+# Source0-md5:	f44c3527b406b6de12309d379373e394
+# t/dat/i8n.dat expectations predate the CLDR data shipped with current DateTime::Locale
+Patch0:		%{name}-i8n-test-data.patch
 URL:		http://search.cpan.org/dist/HTML-CalendarMonth/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -21,7 +23,8 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Class-Accessor
 BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-Date-Manip
-BuildRequires:	perl-DateTime-Locale
+BuildRequires:	perl-DateTime-Locale >= 0.45
+BuildRequires:	perl-File-Which
 BuildRequires:	perl-HTML-Element-Extended >= 1.18
 %endif
 BuildArch:	noarch
@@ -59,6 +62,7 @@ Date::Calc lub Date::Manip.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL \
